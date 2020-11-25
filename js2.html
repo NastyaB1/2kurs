@@ -1,28 +1,32 @@
 <!doctype html>
 <html> 
 <head> 
-<title>LAb 2</title> 
-<script>
- function f(x)
- {document.getElementById('area1').value=x; }
-</script>
-</head>
-<body> 
-<style>
+<title>LAb 2</title>
+ <style>
 body {
 background-color : #F08080;
 }
 </style>
+<script>
+ function f(x)
+ {document.getElementById('area1').value=x; }
+ 
+  function g(x)
+ {document.getElementById('bb1').style.backgroundColor=x; }
+</script>
+</head>
+<body id="bb1">
+
 <p>
  2. Создать группу чекбоксов, с помощью которой можно выбрать цвет фона документа (создайте четыре варианта цветов). Создайте обработку события кнопки формы onclickt появлением строки «ПРИВЕТ,МИР» в многостроковом поле ввода информации данной формы.
 </p>
 <img id="pic1" src="18Pe.gif" ALT="Картинка">
 <form action="handler.php">
    <p>Выберите цвет фона документа:</p>
-   <p><input type="checkbox" name="a" id="b1" > зеленый</p>
-   <p><input type="checkbox" name="a" id="b2"> серый</p>
-   <p><input type="checkbox" name="a" id="b3"> розовый</p>
-   <p><input type="checkbox" name="a" id="b4"> желтый </p>
+   <p><input type="checkbox" onclick="g('green')" name="a" id="b1" > зеленый</p>
+   <p><input type="checkbox" onclick="g('grey')" name="a" id="b2"> серый</p>
+   <p><input type="checkbox" onclick="g('pink')" name="a" id="b3"> розовый</p>
+   <p><input type="checkbox" onclick="g('yellow')" name="a" id="b4"> желтый </p>
 <p><input type="button" onclick=f("Привет,мир!") value="Щелкните здесь"></p>
 <div class="Green1"></div>
 <textarea name=address rows=5 cols=50 id="area1" onclick="rr()">
